@@ -1,0 +1,52 @@
+<svg width="320" height="120" viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#07ABF1" stop-opacity="1"></stop>
+    </radialGradient>
+    <filter id="glow-filter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+    <style type="text/css">
+      .text {
+        fill: url(#glow);
+        font-size: 48px;
+        font-family: 'Segoe UI', sans-serif;
+        font-weight: bold;
+        filter: url(#glow-filter);
+      }
+
+      .spark {
+        fill: #CE5FF8;
+        transform-origin: center;
+        animation: spin 2.5s linear infinite;
+        opacity: 0.7;
+      }
+
+      .spark:nth-child(2) {
+        animation-delay: 1s;
+        fill: #07ABF1;
+      }
+
+      .spark:nth-child(3) {
+        animation-delay: 2s;
+        fill: #F5A623;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg) translateY(0); }
+        100% { transform: rotate(360deg) translateY(-5px); }
+      }
+    </style>
+  </defs>
+
+  <!-- Spark Elements -->
+  <circle class="spark" cx="40" cy="30" r="4"></circle>
+  <circle class="spark" cx="100" cy="15" r="3"></circle>
+  <circle class="spark" cx="200" cy="25" r="4"></circle>
+
+  <!-- Logo Text -->
+  <text class="text" x="60" y="80">ℍ_𝔾</text>
+</svg>

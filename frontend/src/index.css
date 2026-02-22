@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+/* Prevent horizontal scroll / unwanted white space */
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-color: #111827; /* gray-900 */
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px; /* account for fixed navbar height */
+}
+
+body, #root {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-color: #111827;
+}
